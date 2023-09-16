@@ -16,6 +16,13 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	<distributionManagement>
+<repository>
+<id>chat_deploy</id>
+<name>chat_deploy</name>
+<url>http://192.168.49.2:31497/#browse/browse:chat_deploy</url>
+</repository>
+</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
