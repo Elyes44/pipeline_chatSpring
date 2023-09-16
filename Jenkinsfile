@@ -21,6 +21,7 @@ pipeline {
         }
         stage("Publish to Nexus Repository Manager") {
             steps {
+                dir('chat_deploy') 
               sh 'mvn deploy'
                 }
             }
