@@ -4,6 +4,13 @@ pipeline {
         maven "MAVEN"
     }
     stages {
+        
+        stage("Cleanup Workspace") {
+    steps {
+        cleanWs()
+    }
+}
+
         stage("Clone code from GitHub") {
             steps {
                 script {
