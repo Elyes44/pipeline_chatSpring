@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     tools {
@@ -15,17 +14,17 @@ pipeline {
         stage("Maven Build") {
             steps {
                 script {
-                   sh 'mvn clean install'
+                    sh 'mvn clean install'
                     sh 'mvn test'
                 }
             }
         }
         stage("Publish to Nexus Repository Manager") {
             steps {
-                dir('chat_deploy') 
-              sh 'mvn deploy'
+                dir('chat_deploy') {
+                    sh 'mvn deploy'
                 }
             }
         }
     }
-
+}
