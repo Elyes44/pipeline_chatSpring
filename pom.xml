@@ -18,9 +18,9 @@
 	</properties>
 	<distributionManagement>
 <repository>
-<id>chat_deploy</id>
-<name>chat_deploy</name>
-<url>http://192.168.49.2:31497/#browse/browse:chat_deploy</url>
+<id>deploymentRepo</id>
+<name>Nexus Repository</name>
+<url>http://192.168.49.2:30001/repository/maven-releases/</url>
 </repository>
 </distributionManagement>
 	<dependencies>
