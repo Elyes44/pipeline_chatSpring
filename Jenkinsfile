@@ -26,6 +26,14 @@ pipeline {
             }
         }
         stage("Publish to Nexus Repository Manager") {
+    steps {
+        script {
+            // Add the -X option to the Maven command
+            sh 'mvn clean deploy -X'
+        }
+    }
+}
+        stage("Publish to Nexus Repository Manager") {
             steps {
                     sh 'mvn deploy'
                 
