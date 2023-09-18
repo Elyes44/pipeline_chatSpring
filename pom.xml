@@ -20,7 +20,7 @@
 <repository>
 <id>deploymentRepo</id>
 <name>Nexus Repository</name>
-<url>http://192.168.49.2:30001/repository/maven-releases/</url>
+<url>http://192.168.49.2:30001/repository/deploy_project/</url>
 </repository>
 </distributionManagement>
 	<dependencies>
