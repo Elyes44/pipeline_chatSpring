@@ -14,7 +14,7 @@ pipeline {
         stage("Clone code from GitHub") {
             steps {
                 script {
-                    git branch: 'main', credentialsId: 'git_cred', url: 'https://github.com/Elyes44/deploy.git';
+                    git branch: 'main', credentialsId: 'git_cred', url: 'https://github.com/Elyes44/pipeline_chatSpring.git';
                 }
             }
         }
