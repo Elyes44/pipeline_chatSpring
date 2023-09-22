@@ -53,7 +53,7 @@ pipeline {
                             nexusUrl: "192.168.49.2:30001",
                             groupId: pom.groupId,
                             version: pom.version,
-                            repository: "deploy_project",
+                            repository: "maven-releases",
                             credentialsId: "NEXUS_ID",
                             artifacts: [
                                 [artifactId: pom.artifactId,
