@@ -1,0 +1,6 @@
+version: '3'
+services:
+  chat-app:
+    image: justelyes/springMe
+    ports:
+      - "8089:8080"
