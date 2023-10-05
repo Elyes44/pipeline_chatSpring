@@ -24,20 +24,30 @@ pipeline {
                     sh 'mvn clean install'
                 }
             }
-        }/*
+        }
+/*
+          stage('SonarQube analysis Spring Boot') {
+                   steps {
+                         dir('achat') {
+               withSonarQubeEnv(installationName:'sonarqube-8.9.7') {
+             sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+               }
+                         }
+    } 
+  }
+      */  
         stage("Publish to Nexus Repository Manager") {
     steps {
         script {
-            // Add the -X option to the Maven command
-            sh 'mvn clean deploy -X'
+            sh 'mvn clean deploy '
         }
     }
-}*/
+}
 
 
 
 /***********************************************************************************************************************/
-         stage("Publish to Nexus Repository Manager") {
+ /*        stage("Publish to Nexus Repository Manager") {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";
@@ -71,7 +81,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
 /**********************************************************************************************************/
        
     }
